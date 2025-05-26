@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo getElementsByTagName</title>
+</head>
+<body>
+    <p>Primeiro parágrafo.</p>
+    <p>Segundo parágrafo.</p>
+    <div>
+        <p>Terceiro parágrafo (dentro de uma div).</p>
+    </div>
+    <button onclick="destacarParagrafos()">Destacar Parágrafos</button>
+
+    <script>
+        function destacarParagrafos() {
+            const paragrafos = document.getElementsByTagName("p");
+            for (let i = 0; i < paragrafos.length; i++) {
+                paragrafos[i].style.backgroundColor = "yellow";
+                paragrafos[i].style.fontWeight = "bold";
+            }
+        }
+    </script>
+</body>
+</html>

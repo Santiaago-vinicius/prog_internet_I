@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Propriedades de Conteúdo</title>
+    <style>
+        #elementoOculto { display: none; }
+    </style>
+</head>
+<body>
+    <div id="meuElemento">
+        Olá <strong>Mundo</strong>!
+        <span id="elementoOculto">Texto oculto.</span>
+        <script>console.log("Script aqui");</script>
+    </div>
+
+    <button onclick="mostrarConteudos()">Mostrar Conteúdos</button>
+    <div id="saida"></div>
+
+    <script>
+        function mostrarConteudos() {
+            const elemento = document.getElementById("meuElemento");
+            const saida = document.getElementById("saida");
+
+            saida.innerHTML = `
+                <p><b>textContent:</b> ${elemento.textContent}</p>
+                <p><b>innerText:</b> ${elemento.innerText}</p>
+                <p><b>innerHTML:</b> ${elemento.innerHTML.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p> `;
+
+            // Exemplo de como innerHTML pode ser perigoso se não sanitizado:
+            // const userInput = "<img src='x' onerror='alert(\"XSS!\")'>";
+            // elemento.innerHTML = userInput; // NÃO FAÇA ISSO COM INPUTS NÃO CONFIÁVEIS!
+
+            // Exemplo de como textContent trata HTML como texto:
+            // elemento.textContent = "<b>Texto em negrito?</b>"; // Vai mostrar as tags <b>
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Alterar CSS via DOM</title>
+    <style>
+        #caixa {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px; /* Para centralizar verticalmente */
+            transition: all 0.5s ease; /* Para uma transição suave */
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa">Mude minha cor!</div>
+    <button onclick="mudarEstilo()">Mudar Cor e Fonte</button>
+    <button onclick="resetarEstilo()">Resetar Estilo</button>
+
+    <script src="exercicio6.js"></script>
+</body>
+</html>
