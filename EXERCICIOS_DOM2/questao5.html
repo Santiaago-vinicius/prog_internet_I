@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 5 - Imagem por Select</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="Script/questão_5.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Questão 5: Selecionar Imagem</h1>
+        <label for="selectImagem">Escolha uma imagem:</label>
+        <select id="selectImagem">
+            <option value="">Selecione...</option>
+            <option value="https://via.placeholder.com/300x150/FF0000/FFFFFF?text=Imagem+1">Imagem Vermelha</option>
+            <option value="https://via.placeholder.com/300x150/0000FF/FFFFFF?text=Imagem+2">Imagem Azul</option>
+            <option value="https://via.placeholder.com/300x150/008000/FFFFFF?text=Imagem+3">Imagem Verde</option>
+        </select>
+        <div id="resultadoImagem">
+            <img id="imagemExibida" src="" alt="Imagem selecionada aparecerá aqui" style="max-width: 100%; margin-top: 15px;">
+        </div>
+    </div>
+</body>
+</html>
